@@ -1,0 +1,71 @@
+# Mantenha uma estrutura clara das pastas
+
+## Criar Componente Card
+
+1. As estruturas de pastas ajudam você e outros desenvolvedores a entender a disposição dos arquivos e ativos que estão sendo usados em um projeto.
+##Aqui está um exemplo:
+
+~~~javascript
+
+dashboard/
+index.js
+dashboard.css
+dashboard.test.js
+home/
+index.js
+Home.css
+HomeAPI.js
+Home.test.js
+blog/
+index.js
+Blog.css
+Blog.test.js
+~~~
+
+
+# Agrupe arquivos similares
+
+## Institua uma ordem estruturada de importação
+
+Dê uma olhada no seguinte exemplo:
+
+import { Routes, Route } from "react-router-dom";
+import { createSlice } from "@reduxjs/toolkit";
+import { Menu } from "@headlessui/react";
+import Home from "./Home";
+import logo from "./logo.svg";
+import "./App.css";
+
+Você pode ir além agrupando seus arquivos locais de acordo com os tipos de arquivo se isso funcionar para você – ou seja, agrupando componentes, imagens, folhas de estilo, hooks, e assim por diante separadamente sob suas importações locais.
+
+Aqui está um exemplo:
+
+import Home from "./Home";
+import About from "./About"
+import Contact from "./Contact"
+import logo from "./logo.svg";
+import closeBtn from "./close-btn.svg"
+import "./App.css";
+import "Home.css"
+
+## Respeite as convenções de nomenclatura
+
+A documentação do React não oferece nenhum padrão oficial para nomear seus componentes. 
+As convenções de nomenclatura mais usadas são CamelCase e PascalCase.
+
+~~~javascript
+
+import React from 'react'
+function StudentList() {
+  return (
+    <div>StudentList</div>
+  )
+}
+export default StudentList
+~~~
+
+O componente acima é chamado StudentList, sendo muito mais legível do que Studentlist ou studentlist.
+
+Por outro lado, a convenção de nomenclatura CamelCase é usada principalmente para nomenclatura de variáveis, hooks, funções, matrizes, e assim por diante:
+
+
